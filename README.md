@@ -269,9 +269,28 @@ model = torch.load(PATH)
 model.eval()
 ```
 
+## As Pickle
+[(back)](#content)
+
+```python
+# Save a dictionary into a pickle file.
+import pickle
+
+favorite_color = { "lion": "yellow", "kitty": "red" }
+
+pickle.dump( favorite_color, open( "save.p", "wb" ) )
+
+# Load the dictionary back from the pickle file.
+import pickle
+
+favorite_color = pickle.load( open( "save.p", "rb" ) )
+# favorite_color is now { "lion": "yellow", "kitty": "red" }
+```
+
 ## Credits
 
 - [w3schools | File Handling](https://www.w3schools.com/python/python_file_handling.asp)
 - [geeksforgeeks | json](https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/)
 - [numpy | save](https://numpy.org/doc/stable/reference/generated/numpy.save.html)
 - [pytorch | save](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
+- [realpython | pickle](https://realpython.com/python-pickle-module/)
