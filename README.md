@@ -273,6 +273,19 @@ model.eval()
 ## As Pickle
 [(back)](#content)
 
+The Python `pickle` module basically consists of four methods:
+
+```python
+pickle.dump(obj, file, protocol=None, *, fix_imports=True, buffer_callback=None)
+pickle.dumps(obj, protocol=None, *, fix_imports=True, buffer_callback=None)
+pickle.load(file, *, fix_imports=True, encoding="ASCII", errors="strict", buffers=None)
+pickle.loads(bytes_object, *, fix_imports=True, encoding="ASCII", errors="strict", buffers=None)
+```
+
+The first two methods are used during the pickling process, and the other two are used during unpickling. The only difference between `dump()` and `dumps()` is that the first creates a file containing the serialization result, whereas the second returns a string.
+
+To differentiate `dumps()` from `dump()`, it’s helpful to remember that the `s` at the end of the function name stands for string. The same concept also applies to `load()` and `loads()`: The first one reads a file to start the unpickling process, and the second one operates on a string.
+
 ```python
 # Save a dictionary into a pickle file.
 import pickle
