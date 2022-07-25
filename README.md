@@ -2,7 +2,7 @@
 
 ## Content
 
-- [As a File](https://github.com/Arseni1919/Learning_To_Save#as-a-file)
+- [As a File](#as-a-file)
 - [JSON](#as-json)
 
 ## As a File 
@@ -223,16 +223,52 @@ f.close()
 
 ## As Numpy
 
+```python
+import numpy as np
+with open('test.npy', 'wb') as f:
+    np.save(f, np.array([1, 2]))
+    np.save(f, np.array([1, 3]))
+with open('test.npy', 'rb') as f:
+    a = np.load(f)
+    b = np.load(f)
+print(a, b)
+```
 
 ## As PyTorch
 
+#### Save/Load state_dict (Recommended)
+
+Save:
+```python
+torch.save(model.state_dict(), PATH)
+```
+
+Load:
+```python
+model = TheModelClass(*args, **kwargs)
+model.load_state_dict(torch.load(PATH))
+model.eval()
+```
+
+#### Save/Load Entire Model
+Save:
+```python
+torch.save(model, PATH)
+```
+
+Load:
+```python
+# Model class must be defined somewhere
+model = torch.load(PATH)
+model.eval()
+```
 
 ## Credits
 
 - [w3schools | File Handling](https://www.w3schools.com/python/python_file_handling.asp)
-- []()
-- []()
-- []()
+- [geeksforgeeks | json](https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/)
+- [numpy | save](https://numpy.org/doc/stable/reference/generated/numpy.save.html)
+- [pytorch | save](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
 - []()
 - []()
 - []()
