@@ -2,12 +2,12 @@
 
 ## Content
 
-- [As a File](#as-a-file)
+- [As a File](#as-a-file-back)
 - [JSON](#as-json)
 - [Numpy](#as-numpy)
 - [PyTorch](#as-pytorch)
 
-## As a File [(back)](#learning-to-save)
+## As a File [(back)](#content)
 
 #### Open Files
 
@@ -111,7 +111,7 @@ import os
 os.rmdir("myfolder")
 ```
 
-## As JSON [(back)](#learning-to-save)
+## As JSON [(back)](#content)
 
 #### Method 1: Writing JSON to a file in Python using `json.dumps()` 
 
@@ -223,7 +223,7 @@ for i in data['emp_details']:
 f.close()
 ```
 
-## As Numpy [(back)](#learning-to-save)
+## As Numpy [(back)](#content)
 
 ```python
 import numpy as np
@@ -236,7 +236,7 @@ with open('test.npy', 'rb') as f:
 print(a, b)
 ```
 
-## As PyTorch [(back)](#learning-to-save)
+## As PyTorch [(back)](#content)
 
 #### Save/Load state_dict (Recommended)
 
