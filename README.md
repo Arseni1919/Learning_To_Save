@@ -3,6 +3,7 @@
 ## Content
 
 - [As a File](https://github.com/Arseni1919/Learning_To_Save#as-a-file)
+- [JSON](#as-json)
 
 ## As a File 
 
