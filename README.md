@@ -112,7 +112,8 @@ import os
 os.rmdir("myfolder")
 ```
 
-## As JSON [(back)](#content)
+## As JSON 
+[(back)](#content)
 
 #### Method 1: Writing JSON to a file in Python using `json.dumps()` 
 
