@@ -2,12 +2,13 @@
 
 ## Content
 
-- [As a File](#as-a-file-back)
+- [As a File](#as-a-file)
 - [JSON](#as-json)
 - [Numpy](#as-numpy)
 - [PyTorch](#as-pytorch)
 
-## As a File [(back)](#content)
+## As a File 
+[(back)](#content)
 
 #### Open Files
 
@@ -223,7 +224,8 @@ for i in data['emp_details']:
 f.close()
 ```
 
-## As Numpy [(back)](#content)
+## As Numpy 
+[(back)](#content)
 
 ```python
 import numpy as np
@@ -236,7 +238,8 @@ with open('test.npy', 'rb') as f:
 print(a, b)
 ```
 
-## As PyTorch [(back)](#content)
+## As PyTorch 
+[(back)](#content)
 
 #### Save/Load state_dict (Recommended)
 
