@@ -1,7 +1,10 @@
 # Learning To Save
 
+## Content
 
-## File 
+- [As a File]()
+
+## As a File 
 
 #### Open Files
 
@@ -105,13 +108,13 @@ import os
 os.rmdir("myfolder")
 ```
 
-## JSON
+## As JSON
 
 
-## Numpy
+## As Numpy
 
 
-## PyTorch
+## As PyTorch
 
 
 ## Credits
