@@ -2,7 +2,7 @@
 
 ## Content
 
-- [As a File](#as-a-file)
+- [As a File](https://github.com/Arseni1919/Learning_To_Save#as-a-file)
 
 ## As a File 
 
@@ -110,6 +110,115 @@ os.rmdir("myfolder")
 
 ## As JSON
 
+#### Method 1: Writing JSON to a file in Python using `json.dumps()` 
+
+The JSON package in Python has a function called `json.dumps()` that helps in converting a dictionary to a JSON object. It takes two parameters:
+
+- dictionary – the name of a dictionary which should be converted to a JSON object.
+- indent – defines the number of units for indentation
+After converting the dictionary to a JSON object, simply write it to a file using the “write” function.
+
+```python
+import json
+ 
+# Data to be written
+dictionary = {
+    "name": "sathiyajith",
+    "rollno": 56,
+    "cgpa": 8.6,
+    "phonenumber": "9976770500"
+}
+ 
+# Serializing json
+json_object = json.dumps(dictionary, indent=4)
+ 
+# Writing to sample.json
+with open("sample.json", "w") as outfile:
+    outfile.write(json_object)
+```
+
+#### Method 2: Writing JSON to a file in Python using `json.dump()` 
+
+Another way of writing JSON to a file is by using `json.dump()` method The JSON package has the “dump” function which directly writes the dictionary to a file in the form of JSON, without needing to convert it into an actual JSON object. It takes 2 parameters:
+
+- dictionary – the name of a dictionary which should be converted to a JSON object.
+- file pointer – pointer of the file opened in write or append mode.
+```python
+# Python program to write JSON
+# to a file
+ 
+ 
+import json
+ 
+# Data to be written
+dictionary = {
+    "name": "sathiyajith",
+    "rollno": 56,
+    "cgpa": 8.6,
+    "phonenumber": "9976770500"
+}
+ 
+with open("sample.json", "w") as outfile:
+    json.dump(dictionary, outfile)
+```
+
+#### Reading JSON from a file using  `json.load()`
+
+The JSON package has `json.load()` function that loads the JSON content from a JSON file into a dictionary. It takes one parameter:
+
+- File pointer: A file pointer that points to a JSON file.
+
+```python
+import json
+ 
+# Opening JSON file
+with open('sample.json', 'r') as openfile:
+ 
+    # Reading from json file
+    json_object = json.load(openfile)
+ 
+print(json_object)
+print(type(json_object))
+```
+
+#### `json.loads()`
+
+If you have a JSON string, you can parse it by using the `json.loads()` method.json.loads() does not take the file path, but the file contents as a string, using fileobject.read() with json.loads() we can return the content of the file.
+
+```python
+# Python program to read
+# json file
+  
+  
+import json
+  
+  
+# JSON string
+a = '{"name": "Bob", "languages": "English"}'
+  
+# deserializes into dict 
+# and returns dict.
+y = json.loads(a)
+  
+print("JSON string = ", y)
+print()
+  
+  
+  
+# JSON file
+f = open ('data.json', "r")
+  
+# Reading from file
+data = json.loads(f.read())
+  
+# Iterating through the json
+# list
+for i in data['emp_details']:
+    print(i)
+  
+# Closing file
+f.close()
+```
 
 ## As Numpy
 
