@@ -6,6 +6,7 @@
 - [JSON](#as-json)
 - [Numpy](#as-numpy)
 - [PyTorch](#as-pytorch)
+- [Pickle](#as-pickle)
 
 ## As a File 
 [(back)](#content)
